@@ -7,3 +7,5 @@ Como todos nos imaginamos, una forma en la que se recopilan datos para crear est
 Igualmente se checa la hora del día en que normalmente usas el servicio, el dispositivo que usas y cuánto tiempo le inviertes. fuente: https://help.netflix.com/es/node/100639#:~:text=C%C3%B3mo%20funciona%20el%20sistema%20de%20recomendaciones%20de%20Netflix,4%20C%C3%B3mo%20mejoramos%20nuestro%20sistema%20de%20recomendaciones%20
 
 Personalmente para hacer este proyecto, considero que es más sencillo hacer una serie de preguntas al usuario, las cuales permitan definir claramente los gustos e intenciones del usuario en la plataforma, simples pregusntas que no tardarán mucho tiempo en terminar para que de esta manera se pueda definir clam¿ramente sus gustos.
+
+En este 2do avance, he creado el primer archivo del proyecto y en este mismo, se hace una encuesta al usuario sobre peliculas de distintos géneros, esto con el fin de poder crear un promedio de los resultados de los 5 géneros mostrados, para que se pueda encontrar el género que mejor calificación promedia y en base a ello recomendar peliculas de ese estilo.
