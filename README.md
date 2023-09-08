@@ -13,3 +13,6 @@ Personalmente para hacer este proyecto, considero que es más sencillo hacer una
 En este 2do avance, he creado el primer archivo del proyecto y en este mismo, se hace una encuesta al usuario sobre peliculas de distintos géneros, esto con el fin de poder crear un promedio de los resultados de los 5 géneros mostrados, para que se pueda encontrar el género que mejor calificación promedia y en base a ello recomendar peliculas de ese estilo.
 
 En el 3er avance, incorporo una nueva función para poder mostrar cual es el género más a fin al usuario.
+
+En el 4to avance incorpore if y elif a mi proyecto para que de esta forma pueda obtener el género que tiene un mayor promedio por parte de las calificaciones
+que el usuario asignó.
