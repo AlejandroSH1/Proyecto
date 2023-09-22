@@ -48,7 +48,15 @@ def genero_preferido(genero_1, genero_2, genero_3, genero_4, genero_5):
     elif genero_5 == maximo[0]:
         maximo.append(genero_5)
         maximo.append("Ficcion")
-    return maximo
+"""
+maximo.pop(), según lo que leí en W3, sirve para quitar elementos de una lista en base a un número
+que representa el orden de la lista, pero no me está sirviendo como debería, ya que si colocara 0
+me debería de quitar el primer elemento y me está quitando el 2do, de igual forma si hay más de un
+genero preferido en vez de eliminarme un elemento, se queda con un solo elemento, voy a estudiarlo
+y probarlo para entender por qué cambia sufuncionamiento a como dice en la página W3.
+"""
+    return maximo.pop(-1)
+
 
 # Esta instrucción permite al usuario entender que hará con las películas que se le mostrarán
 print("Califica las películas sobre 10 y en caso de no haber visto alguna, coloca 0 ")
@@ -77,4 +85,64 @@ gen3 = comedia(barbie, son_como_niños, scary_movie)
 gen4 = caricatura(cars, shrek, up)
 gen5 = ficcion(avatar, star_wars, spiderman_2)
 
-print(genero_preferido(gen1, gen2, gen3, gen4, gen5))
+preferido = genero_preferido(gen1, gen2, gen3, gen4, gen5)
+print(preferido)
+
+#Se crean listas con recomendaciones de películas según su género al que pertenece
+lista_suspenso = ["el_niño", "halloween", "un_lugar_en_silencio", "fragmentado", "la_purga"]
+lista_western = ["rambo", "nope", "logan", "renacido", "vaqueros_contra_aliens"]
+lista_comedia = ["que_paso_ayer", "golpe_bajo", "gato_con_botas", "en_donde_estan_las_rubias", "mario_bros"]
+lista_caricatura = ["kung_fu_panda", "toy_story", "wall-e", "monsters_university", "atlantis"]
+lista_ficcion = ["interestelar", "e.t.", "pantera_negra", "avengers", "the_batman"]
+
+#Se aplican if´s para encontrar el género preferido y mostrarle las recomendaciones al usuario
+#El usuario puede elegir si quedarse con la primera recomendación o cualquiera posterior
+if preferido =="Suspenso":
+    peli_sus = 0
+    while(peli_sus < len(lista_suspenso)):
+        print("te recomendamos ver: ", lista_suspenso[peli_sus])
+        pregu1 = input("¿Deseas otra recomendacion? ")
+        if pregu1 != "no":
+            peli_sus = peli_sus + 1
+        else:
+            peli_sus = len(lista_suspenso)
+        
+if preferido =="Western":
+    peli_wes = 0
+    while(peli_wes < len(lista_western)):
+        print("te recomendamos ver: ", lista_western[peli_wes])
+        pregu2 = input("¿Deseas otra recomendacion? ")
+        if pregu2 != "no":
+            peli_wes = peli_wes + 1
+        else:
+            peli_wes = len(lista_western)
+    
+if preferido =="Comedia":
+    peli_com = 0
+    while(peli_com < len(lista_comedia)):
+        print("te recomendamos ver: ", lista_comedia[peli_com])
+        pregu3 = input("¿Deseas otra recomendacion? ")
+        if pregu3 != "no":
+            peli_com = peli_com + 1
+        else:
+            peli_com = len(lista_comedia)
+        
+if preferido =="Caricatura":
+    peli_car = 0
+    while(peli_car < len(lista_caricatura)):
+        print("te recomendamos ver: ", lista_caricatura[peli_car])
+        pregu4 = input("¿Deseas otra recomendacion? ")
+        if pregu4 != "no":
+            peli_car = peli_car + 1
+        else:
+            peli_car = len(lista_caricatura)
+        
+if preferido =="Ficcion":
+    peli_fic = 0
+    while(peli_fic < len(lista_ficcion)):
+        print("te recomendamos ver: ", lista_ficcion[peli_fic])
+        pregu5 = input("¿Deseas otra recomendacion? ")
+        if pregu5 != "no":
+            peli_fic = peli_fic + 1
+        else:
+            peli_fic = len(lista_ficcion)
