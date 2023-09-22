@@ -16,3 +16,8 @@ En el 3er avance, incorporo una nueva función para poder mostrar cual es el gé
 
 En el 4to avance incorpore if y elif a mi proyecto para que de esta forma pueda obtener el género que tiene un mayor promedio por parte de las calificaciones
 que el usuario asignó.
+
+En este 5to avance practicamente terminé con la idea central del proyecto, solo que encontré un problema en el código y es en donde se pide un pop(), está unido
+a una lista que se llama maximo, la cual muestra el género preferido del usuario, esta funcion pop() menciona W3 que sirve para quitar elementos de una lista 
+mostrando un número que corresponde a una posición, pero en el python no hace eso y por lo tanto no entendí su funcionamiento, por lo que el código solo funciona
+si solo hay un genero preferido y no varios, por lo que tendré que buscar una alternativa o entender como funciona verdaeramente pop().
