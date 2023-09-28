@@ -21,3 +21,6 @@ En este 5to avance practicamente terminé con la idea central del proyecto, solo
 a una lista que se llama maximo, la cual muestra el género preferido del usuario, esta funcion pop() menciona W3 que sirve para quitar elementos de una lista 
 mostrando un número que corresponde a una posición, pero en el python no hace eso y por lo tanto no entendí su funcionamiento, por lo que el código solo funciona
 si solo hay un genero preferido y no varios, por lo que tendré que buscar una alternativa o entender como funciona verdaeramente pop().
+
+En este 6to avance investigué mejor la funcion pop() y entendí que lo que pasaba era error mio y las implementé para que borraran los promedios y se mentiene
+unicamente el género.
