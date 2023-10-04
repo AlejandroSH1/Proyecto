@@ -119,57 +119,64 @@ lista_ficcion = ["interestelar", "e.t.", "pantera_negra", "avengers", "the_batma
 
 #Se aplican if´s para encontrar el género preferido y mostrarle las recomendaciones al usuario
 #El usuario puede elegir si quedarse con la primera recomendación o cualquiera posterior
+recomendaciones = [lista_suspenso, lista_western, lista_comedia, lista_caricatura, lista_ficcion]
+
 if preferido == ["Suspenso"]:
     peli_sus = 0
-    while(peli_sus < len(lista_suspenso)):
-        print("te recomendamos ver: \n", lista_suspenso[peli_sus])
-        pregu1 = input("¿Deseas otra recomendacion? ")
+    while(peli_sus < len(recomendaciones[0])):
+        print("te recomendamos ver: \n", recomendaciones[0][peli_sus])
+        if peli_sus < 4:
+            pregu1 = input("¿Deseas otra recomendacion? ")
         if pregu1 != "no":
             peli_sus = peli_sus + 1
         else:
-            peli_sus = len(lista_suspenso)
+            peli_sus = len(recomendaciones[0])
     print("\nNo tenemos más recomendaciones por el momento, gracias")
         
 if preferido == ["Western"]:
     peli_wes = 0
-    while(peli_wes < len(lista_western)):
-        print("te recomendamos ver: \n", lista_western[peli_wes])
-        pregu2 = input("¿Deseas otra recomendacion? ")
+    while(peli_wes < len(recomendaciones[1])):
+        print("te recomendamos ver: \n", recomendaciones[1][peli_wes])
+        if peli_wes < 4:
+            pregu2 = input("¿Deseas otra recomendacion? ")
         if pregu2 != "no":
             peli_wes = peli_wes + 1
         else:
-            peli_wes = len(lista_western)
+            peli_wes = len(recomendaciones[1])
     print("\nNo tenemos más recomendaciones por el momento, gracias")
     
 if preferido == ["Comedia"]:
     peli_com = 0
-    while(peli_com < len(lista_comedia)):
-        print("te recomendamos ver: \n", lista_comedia[peli_com])
-        pregu3 = input("¿Deseas otra recomendacion? ")
+    while(peli_com < len(recomendaciones[2])):
+        print("te recomendamos ver: \n", recomendaciones[2][peli_com])
+        if peli_com < 4:
+            pregu3 = input("¿Deseas otra recomendacion? ")
         if pregu3 != "no":
             peli_com = peli_com + 1
         else:
-            peli_com = len(lista_comedia)
+            peli_com = len(recomendaciones[2])
     print("\nNo tenemos más recomendaciones por el momento, gracias")
         
 if preferido == ["Caricatura"]:
     peli_car = 0
-    while(peli_car < len(lista_caricatura)):
-        print("te recomendamos ver: \n", lista_caricatura[peli_car])
-        pregu4 = input("¿Deseas otra recomendacion? ")
+    while(peli_car < len(recomendaciones[3])):
+        print("te recomendamos ver: \n", recomendaciones[3][peli_car])
+        if peli_car < 4:
+            pregu4 = input("¿Deseas otra recomendacion? ")
         if pregu4 != "no":
             peli_car = peli_car + 1
         else:
-            peli_car = len(lista_caricatura)
+            peli_car = len(recomendaciones[3])
     print("\nNo tenemos más recomendaciones por el momento, gracias")
         
 if preferido == ["Ficcion"]:
     peli_fic = 0
-    while(peli_fic < len(lista_ficcion)):
-        print("te recomendamos ver: \n", lista_ficcion[peli_fic])
-        pregu5 = input("¿Deseas otra recomendacion? ")
+    while(peli_fic < len(recomendaciones[4])):
+        print("te recomendamos ver: \n", recomendaciones[4][peli_fic])
+        if peli_fic < 4:
+            pregu5 = input("¿Deseas otra recomendacion? ")
         if pregu5 != "no":
             peli_fic = peli_fic + 1
         else:
-            peli_fic = len(lista_ficcion)
+            peli_fic = len(recomendaciones[4])
     print("\nNo tenemos más recomendaciones por el momento, gracias")
