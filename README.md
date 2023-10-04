@@ -24,3 +24,5 @@ si solo hay un genero preferido y no varios, por lo que tendré que buscar una a
 
 En este 6to avance investigué mejor la funcion pop() y entendí que lo que pasaba era error mio y las implementé para que borraran los promedios y se mentiene
 unicamente el género.
+
+En el 7mo avance, implementé listas anidadas y el proyecto está practicamente terminado y funciona a la perfección.
