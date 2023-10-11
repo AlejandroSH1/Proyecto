@@ -32,7 +32,7 @@ Sub-Competencia:
 Aplica estructuras cíclicas para resolver un problema de manera eficiente (avance 5)
 
 Error original:
-Ingresé un comentario en la línea 80 entre estas 2 lineas:
+Ingresé un comentario en la línea 87 entre estas 2 lineas:
     
     elif genero_5 == maximo[0]:
         maximo.append(genero_5)
@@ -52,4 +52,4 @@ ya sabía a ciencia cierta su funcionamiento por lo que solo tuve que quitar el 
 código funcionó correctamente
 
 Líneas de código donde se ve la corrección:
-Línea 80
+Línea 87
