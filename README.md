@@ -32,14 +32,16 @@ Sub-Competencia:
 Aplica estructuras cíclicas para resolver un problema de manera eficiente (avance 5)
 
 Error original:
-Ingresé un comentario en la línea 51 entre estas 2 lineas:
-elif genero_5 == maximo[0]:
+Ingresé un comentario en la línea 80 entre estas 2 lineas:
+    
+    elif genero_5 == maximo[0]:
         maximo.append(genero_5)
         maximo.append("Ficcion")
         
     if len(maximo) == 2:
         maximo.pop(0)
         return maximo
+        
 Esto provocó que la función se diera por terminada en donde dice maximo.append("Ficcion") y lo demás
 ya no continuó debido a este comentario entre ambos, lo que ocasionó que el programa no compilara
 
@@ -50,4 +52,4 @@ ya sabía a ciencia cierta su funcionamiento por lo que solo tuve que quitar el 
 código funcionó correctamente
 
 Líneas de código donde se ve la corrección:
-Línea 51
+Línea 80
