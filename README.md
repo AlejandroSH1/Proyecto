@@ -53,3 +53,13 @@ código funcionó correctamente
 
 Líneas de código donde se ve la corrección:
 Línea 87
+
+### API de Python
+
+Biblioteca: Statistics
+
+Función: Statistics.mean()
+
+Explicación: La media aritmética es la suma de los datos dividida por el número de puntos de datos. Comúnmente se le llama "el promedio", aunque es solo uno de los muchos promedios matemáticos diferentes. Es una medida de la ubicación central de los datos.
+
+Fuente: https://docs.python.org/3/library/statistics.html#statistics.mean
