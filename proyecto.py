@@ -1,67 +1,32 @@
 """
+Alfredo Alejandro Soto Herrera - A01711368
+Proyecto integrador
+Recomendador de peliculas
 Este proyecto consiste en un servicio de streaming, que recomienda peliculas
 en base a los gustosde un usuario.
 """
 #bibliotecas
 import statistics
 
-def suspenso(sus_1, sus_2, sus_3):
+def promedio_generos(peliculas):
     """
-    Función que devuelve el promedio de las peliculas que pertenecen al genero
-    de suspenso
+    recibe: peliculas, es un arreglo de 3 películas de un género específico
+    Función que calcula el promedio del arreglo
+    devuelve: el promedio de las peliculas que pertenecen al género escogido
     """
-    suspenso_peli = [sus_1, sus_2, sus_3]
-    prom_sus = statistics.mean(suspenso_peli)
-    return prom_sus
-
-def western(wes_1, wes_2, wes_3):
-    """
-    Función que devuelve el promedio de las peliculas que pertenecen al genero
-    western
-    """
-    western_peli = [wes_1, wes_2, wes_3]
-    prom_wes = statistics.mean(western_peli)
-    return prom_wes
-
-def comedia(com_1, com_2, com_3):
-    """
-    Función que devuelve el promedio de las peliculas que pertenecen al genero
-    de comedia
-    """
-    comedia_peli = [com_1, com_2, com_3]
-    prom_com = statistics.mean(comedia_peli)
-    return prom_com
-
-def caricatura(car_1, car_2, car_3):
-    """
-    Función que devuelve el promedio de las peliculas que pertenecen al genero
-    de caricatura
-    """
-    caricatura_peli = [car_1, car_2, car_3]
-    prom_car = statistics.mean(caricatura_peli)
-    return prom_car
-
-def ficcion(fic_1, fic_2, fic_3):
-    """
-    Función que devuelve el promedio de las peliculas que pertenecen al genero
-    de ficción
-    """
-    ficcion_peli = [fic_1, fic_2, fic_3]
-    prom_fic = statistics.mean(ficcion_peli)
-    return prom_fic
-
-"""
-Dependiendo de los resultados de los promedios, se va a calcular el género
-que más ve el usuario por medio de if y elif y se va a imprimir el promedio
-que se obtuvo y el género al que pertenece
-"""
+    promedio = statistics.mean(peliculas)
+    return promedio
 
 def genero_preferido(genero_1, genero_2, genero_3, genero_4, genero_5):
     """
+    recibe: genero_1, genero_2, genero_3, genero_4 y genero_5 que corresponden
+    a los promedios de los géneros suspenso, western, comedia, caricatura y
+    ficcion respectivamente
     Funcion en la cual devuelve el género preferido del usuario y en caso de
     ser más de uno se adjunta todo en una lista, en un segundo paso se
     elimina el promedio de los géneros para permanecer unicamente el nombre
     del género
+    devuelve: máximo
     """
     maximo = [genero_1, "Suspenso"]
     if genero_2 > maximo[0]:
@@ -111,58 +76,61 @@ def genero_preferido(genero_1, genero_2, genero_3, genero_4, genero_5):
         maximo.pop(4)
         return maximo
 
-print("Califica las películas sobre 10 y en caso de no haber visto alguna,\
-coloca 0 ")
+print("Califica las películas sobre 10 y en caso de no haber visto alguna\
+coloca 0, en base a estas calificaciones escogeremos un género sobre el \
+cual hacerte recomendaciones \n")
 
 #El usuario califica peliculas para conocer su género preferido
-intriga = int(input("intriga "))
-los_otros = int(input("los otros "))
-sexto_sentido = int(input("sexto sentido "))
-django = int(input("django "))
-los_ocho_mas_odiados = int(input("los 8 más odiados "))
-comancheria = int(input("comanchería "))
-barbie = int(input("barbie "))
-son_como_niños = int(input("son como niños "))
-scary_movie = int(input("scary movie "))
-cars = int(input("cars "))
-shrek =int(input("shrek "))
-up = int(input("up "))
-spiderman_2 = int(input("spiderman 2 "))
-star_wars = int(input("star wars "))
-avatar  = int(input("avatar "))
+peliculas_a_calificar = ["intriga", "los otros", "sexto sentido", "django",
+                         "los ocho mas odiados","comancheria", "barbie",
+                         "son como niños", "scary movie", "cars", "shrek",
+                         "up", "avatar", "star wars(III)","spiderman 2"]
+
+calificaciones = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+i = 0
+for i in range(len(peliculas_a_calificar)):
+    print(peliculas_a_calificar[i])
+    calificaciones[i] = int(input())
+
+suspenso = calificaciones[0:3]
+western = calificaciones[3:6]
+comedia = calificaciones[6:9]
+caricatura = calificaciones[9:12]
+ficcion = calificaciones[12:15]
 
 #Se guardan en variables los promedios
-gen1 = suspenso(intriga, los_otros, sexto_sentido)
-gen2 = western(django, los_ocho_mas_odiados, comancheria)
-gen3 = comedia(barbie, son_como_niños, scary_movie)
-gen4 = caricatura(cars, shrek, up)
-gen5 = ficcion(avatar, star_wars, spiderman_2)
+gen1 = promedio_generos(suspenso)
+gen2 = promedio_generos(western)
+gen3 = promedio_generos(comedia)
+gen4 = promedio_generos(caricatura)
+gen5 = promedio_generos(ficcion)
 
 preferido = genero_preferido(gen1, gen2, gen3, gen4, gen5)
 print()
-print(preferido)
+if len(preferido) == 1:
+    print("Tu género preferido fue: ", preferido)
+else:
+    print("Tus géneros preferidos fueron: ", preferido)
+    preferido = [input("Ingresa el nombre del genero que quieras ver hoy \n")]
 print()
 
-if len(preferido) > 1:
-    preferido = [input("Ingresa el nombre del genero que quieras ver hoy\
-\n")]
-
 #Se crean listas con recomendaciones de películas según su género
-lista_suspenso = ["el_niño", "halloween", "un_lugar_en_silencio",
-                  "fragmentado", "la_purga"]
+lista_suspenso = ["el niño", "halloween", "un lugar en silencio",
+                  "fragmentado", "la purga"]
 lista_western = ["rambo", "nope", "logan", "renacido",
-                 "vaqueros_contra_aliens"]
-lista_comedia = ["que_paso_ayer", "golpe_bajo", "gato_con_botas",
-                 "en_donde_estan_las_rubias", "mario_bros"]
-lista_caricatura = ["kung_fu_panda", "toy_story", "wall-e",
-                    "monsters_university", "atlantis"]
-lista_ficcion = ["interestelar", "e.t.", "pantera_negra", "avengers",
-                 "the_batman"]
+                 "vaqueros contra aliens"]
+lista_comedia = ["que paso ayer", "golpe bajo", "gato con botas",
+                 "en donde estan las rubias", "mario bros"]
+lista_caricatura = ["kung fu panda", "toy story", "wall-e",
+                    "monsters university", "atlantis"]
+lista_ficcion = ["interestelar", "e.t.", "pantera negra", "avengers",
+                 "the batman"]
 
 recomendaciones = [lista_suspenso, lista_western, lista_comedia,
                    lista_caricatura, lista_ficcion]
 
-#Se aplican if´s para encontrar el género preferido del usuario
+#Se aplican if´s para encontrar el género preferido del usuario y recomendar
 if preferido == ["Suspenso"]:
     peli_sus = 0
     while(peli_sus < len(recomendaciones[0])):
@@ -221,4 +189,4 @@ if preferido == ["Ficcion"]:
             peli_fic = peli_fic + 1
         else:
             peli_fic = len(recomendaciones[4])
-    print("\nNo tenemos más recomendaciones por el momento, gracias")    
+    print("\nNo tenemos más recomendaciones por el momento, gracias")
